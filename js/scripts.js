@@ -1,25 +1,22 @@
 $(document).ready(function() {
-  var cSharp = 0;
-  var java = 0;
-  var php = 0;
-
-  $("form#formQuestionOne").submit(funtion(event)) {
+  $("form#survey").submit(function(event) {
     var classQuestionOne = $("select#classQuestionOne").val();
+    var classQuestionTwo = $("select#classQuestionTwo").val();
+    var classQuestionThree = $("select#classQuestionThree").val();
+    var classQuestionFour = $("select#classQuestionFour").val();
+    var classQuestionFive = $("select#classQuestionFive").val();
 
-    console.log(classQuestionOne)
-    if (classQuestionOne === 'cSharp') {
-      cSharp += 1;
-    } else if (classQuestionOne === 'java') {
-      java += 1;
-    } else if (classQuestionOne === 'php') {
-      php += 1;
-    }
 
-    if (cSharp < 0){
+    if (classQuestionOne === 'cSharpOne' && classQuestionTwo === 'cSharpOne' && classQuestionThree === 'cSharpOne' && classQuestionFour === 'cSharpOne' && classQuestionFive === 'cSharpOne' || classQuestionOne === 'cSharpOne' && classQuestionFour === 'cSharpOne' && classQuestionFive === 'cSharpOne' || classQuestionFour === 'cSharpOne' && classQuestionFive === 'cSharpOne' && classQuestionTwo === 'cSharpOne') {
       $("#cSharp").show();
+    } else if (classQuestionOne === 'javaOne' && classQuestionTwo === 'javaOne' && classQuestionThree === 'javaOne' && classQuestionFour === 'javaOne' && classQuestionFive === 'javaOne' || classQuestionOne === 'javaOne' && classQuestionFour === 'javaOne' && classQuestionFive === 'javaOne' || classQuestionFour === 'javaOne' && classQuestionFive === 'javaOne' && classQuestionTwo === 'javaOne') {
+      $("#java").show();
+    } else if (classQuestionOne === 'phpOne' && classQuestionTwo === 'phpOne' && classQuestionThree === 'phpOne' && classQuestionFour === 'phpOne' && classQuestionFive === 'phpOne' || classQuestionOne === 'phpOne' && classQuestionFour === 'phpOne' && classQuestionFive === 'phpOne' || classQuestionFour === 'phpOne' && classQuestionFive === 'phpOne' && classQuestionTwo === 'phpOne') {
+      $("#php").show();
     }
+
 
     event.preventDefault();
 
-  }
+  });
 });
