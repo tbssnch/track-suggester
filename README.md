@@ -10,7 +10,15 @@ This is a webpage that asks the user certain questions about themselves and will
 
 ## Setup/Installation
 
-Go to github.com/
+Go to github.com/tbssnch
+
+Click on the repositories tab.
+
+Then select track-suggester and hit the green clone or download button.
+
+Download the files. 
+
+Open the track-suggester folder on your desktop.
 
 Open index.html.
 
